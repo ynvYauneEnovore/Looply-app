@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import Home from "./modules/home";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfUse from "./pages/TermsOfUse";
-import LegalNotice from "./pages/LegalNotice";
+import Layout from "../components/Layout";
+import Home from "../modules/home";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import TermsOfUse from "../pages/TermsOfUse";
 
 function NotFound() {
   return (
@@ -14,7 +13,7 @@ function NotFound() {
   );
 }
 
-export default function App() {
+export default function AppRouter() {
   return (
     <BrowserRouter>
       <Layout>
@@ -22,7 +21,6 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfUse />} />
-          <Route path="/legal" element={<LegalNotice />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
